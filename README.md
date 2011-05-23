@@ -6,7 +6,7 @@ project](http://refuge.io).
 
 The version of CouchDB provided is based on couchdb trunk for now and
 can be used on Linux, FreeBSD 8.0x and sup, MacOSX 10.6/10.7 with Erlang
-R13B04/R14x.
+R13B04/R14x. Tested on i386, amd64 and Arm platforms.
 
 ##Installation:
 
