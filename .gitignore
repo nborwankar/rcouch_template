@@ -1,0 +1,7 @@
+*.o
+*.so
+*.Tpo
+*.beam
+*.swp
+.DS_Store
+erl_crash.dump

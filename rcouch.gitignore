@@ -1,0 +1,35 @@
+*.o
+*.so
+*.Tpo
+*.beam
+erl_crash.dump
+rel/{{appid}}-*.tar.gz
+
+
+rel/archive
+
+# building
+apps/*/ebin/
+rel/dbcore
+rel/overlay.config
+config.mk
+
+# testing
+.eunit
+@abs_top_builddir@/
+
+# dev
+rel/dev*
+rel/tmpdata
+
+# vim 
+*.swp
+*.dump
+
+# rebar deps
+deps
+
+# rel
+rel/{{appid}}
+rel/dev.config
+rel/{{appid}}.config

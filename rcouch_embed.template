@@ -1,0 +1,43 @@
+%% -*- tab-width: 4;erlang-indent-level: 4;indent-tabs-mode: nil -*-
+%% ex: ft=erlang ts=4 sw=4 et
+
+{variables, [
+        {appid, "myapp"},
+        {sysconf_dir, "{{sysconf_dir}}"},
+        {prefix, "{{prefi}}"},
+        {data_dir, "{{data_dir}}"},
+        {view_dir, "{{view_dir}}"},
+        {run_dir, "{{run_dir}}"},
+        {log_dir, "{{log_dir}}"},
+        {user, "{{user}}"},
+        {node_name, "{{node_name}}"},
+        {couchdb_port, "{{couchdb_port}}"},
+        {ssl_port, "{{ssl_port}}"}
+        
+]}.
+
+
+{template, "rcouch_embed.app.src", "apps/{{appid}}/src/{{appid}}.app.src"}.
+{template, "rcouch_embed.erl", "apps/{{appid}}/src/{{appid}}.erl"}.
+{template, "rcouch_embed_app.erl", "apps/{{appid}}/src/{{appid}}_app.erl"}.
+{template, "rcouch_embed_sup.erl", "apps/{{appid}}/src/{{appid}}_sup.erl"}.
+{template, "rcouch_httpd_misc.erl", "apps/{{appid}}/src/{{appid}}_httpd_misc.erl"}.
+{template, "rcouch.configure", "configure"}.
+{chmod, 8#744, "configure"}.
+{template, "rcouch.Makefile", "Makefile"}.
+{template, "rcouch.gitignore", ".gitignore"}.
+{template, "rcouch.rebar.config", "rebar.config"}.
+{template, "rcouch.md", "README.md"}.
+
+{template, "rcouch.rel/overlay/bin/rcouch", "rel/overlay/bin/{{appid}}"}.
+{chmod, 8#744, "rel/overlay/bin/{{appid}}"}.
+{template, "rcouch.rel/overlay/etc/rcouch/default.ini", "rel/overlay/etc/{{appid}}/default.ini"}.
+{template, "rcouch.rel/overlay/etc/rcouch/local.ini", "rel/overlay/etc/{{appid}}/local.ini"}.
+{template, "rcouch.rel/overlay/etc/rcouch/vm.args", "rel/overlay/etc/{{appid}}/vm.args"}.
+{template, "rcouch.rel/overlay/etc/rc.d/rcouch", "rel/overlay/etc/rc.d/{{appid}}"}.
+{template, "rcouch.rel/overlay/etc/logrotate.d/rcouch", "rel/overlay/etc/logrotate.d/{{appid}}"}.
+{template, "rcouch.rel/overlay/etc/default/rcouch",  "rel/overlay/etc/default/{{appid}}"}.
+{template, "rcouch.rel/reltool_embed.config", "rel/reltool.config"}.
+{template, "rcouch.rel/overlay/erts-vsn/bin/erl", "rel/overlay/erts-vsn/bin/erl"}.
+
+
