@@ -1,7 +1,8 @@
 # Rebar templates for generating custom couchdb releases 
 
-This is a rebar template that allows you to create your own CouchDB
-releases based on rebared version provided by the [refuge
+This project provide rebar templates that allows you to create your own
+CouchDB releases or embed CouchDB applications based on the rebared
+version of Apache CouchDB provided by the [refuge
 project](http://refuge.io). 
 
 The version of CouchDB provided is based on couchdb trunk for now and
