@@ -43,8 +43,8 @@ distclean: clean
 install: dist
 	@echo "==> install to $(DESTDIR)$(PREFIX)"
 	@mkdir -p $(DESTDIR)$(PREFIX)
-	@for D in bin erts-* lib releases share; do\\
-		cp -R rel/{{appid}}/$$D $(DESTDIR)$(PREFIX) ; \\
+	@for D in bin erts-* lib releases share; do\
+		cp -R rel/{{appid}}/$$D $(DESTDIR)$(PREFIX) ; \
 	done
 	@chmod +x $(DESTDIR)$(PREFIX)/bin/{{appid}}
 	@mkdir -p $(DESTDIR)$(SYSCONF_DIR)
@@ -61,7 +61,7 @@ install: dist
 
 deps-snapshot: clean
 	@rm -rf {{appid}}-deps-$(OS)-$(ARCH).tar.gz
-	(cd deps && \\
+	(cd deps && \
 		tar cvzf ../{{appid}}-deps-$(VERSION)-$(OS)-$(ARCH).tar.gz .)
 
 archive: dist
@@ -69,8 +69,8 @@ archive: dist
 	@rm -f {{appid}}-$(VERSION)-$(OS)-$(ARCH).tar.gz
 	@mkdir -p $(DISTDIR)$(PREFIX)
 	@cp -R rel/{{appid}}/* $(DISTDIR)/$(PREFIX)
-	@for D in bin erts-* lib releases share; do\\
-		cp -R rel/{{appid}}/$$D $(DISTDIR)$(PREFIX) ; \\
+	@for D in bin erts-* lib releases share; do\
+		cp -R rel/{{appid}}/$$D $(DISTDIR)$(PREFIX) ; \
 	done
 	@mkdir -p $(DISTDIR)$(SYSCONF_DIR)/{{appid}}
 	@cp -R rel/{{appid}}/etc/*  $(DISTDIR)$(SYSCONF_DIR)/{{appid}}/
@@ -79,10 +79,10 @@ archive: dist
 	@mkdir -p $(DISTDIR)$(DATADIR)
 	@mkdir -p $(DISTDIR)$(VIEWDIR)
 	@touch $(DISTDIR)$(PREFIX)/var/log/{{appid}}.log
-	@for F in LICENSE NOTICE README ; do \\
-		cp -f $$F $(DISTDIR)$(PREFIX) ; \\
+	@for F in LICENSE NOTICE README ; do \
+		cp -f $$F $(DISTDIR)$(PREFIX) ; \
 	done
-	(cd $(DISTDIR) && \\
+	(cd $(DISTDIR) && \
 		tar -cvzf ../{{appid}}-$(VERSION)-$(OS)-$(ARCH).tar.gz .)
 
 dev: all
