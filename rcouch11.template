@@ -24,18 +24,18 @@
 {chmod, 8#744, "configure"}.
 {template, "rcouch.Makefile", "Makefile"}.
 {template, "rcouch.gitignore", ".gitignore"}.
-{template, "rcouch.rebar.config", "rebar.config"}.
+{template, "rcouch11.rebar.config", "rebar.config"}.
 {template, "rcouch.md", "README.md"}.
 
-{template, "rcouch.rel/master/overlay/bin/rcouch", "rel/overlay/bin/{{appid}}"}.
+{template, "rcouch.rel/1.1/overlay/bin/rcouch", "rel/overlay/bin/{{appid}}"}.
 {chmod, 8#744, "rel/overlay/bin/{{appid}}"}.
-{template, "rcouch.rel/master/overlay/etc/rcouch/default.ini", "rel/overlay/etc/{{appid}}/default.ini"}.
-{template, "rcouch.rel/master/overlay/etc/rcouch/local.ini", "rel/overlay/etc/{{appid}}/local.ini"}.
-{template, "rcouch.rel/master/overlay/etc/rcouch/vm.args", "rel/overlay/etc/{{appid}}/vm.args"}.
-{template, "rcouch.rel/master/overlay/etc/rc.d/rcouch", "rel/overlay/etc/rc.d/{{appid}}"}.
-{template, "rcouch.rel/master/overlay/etc/logrotate.d/rcouch", "rel/overlay/etc/logrotate.d/{{appid}}"}.
-{template, "rcouch.rel/master/overlay/etc/default/rcouch",  "rel/overlay/etc/default/{{appid}}"}.
-{template, "rcouch.rel/master/reltool.config", "rel/reltool.config"}.
-{template, "rcouch.rel/master/overlay/erts-vsn/bin/erl", "rel/overlay/erts-vsn/bin/erl"}.
+{template, "rcouch.rel/1.1/overlay/etc/rcouch/default.ini", "rel/overlay/etc/{{appid}}/default.ini"}.
+{template, "rcouch.rel/1.1/overlay/etc/rcouch/local.ini", "rel/overlay/etc/{{appid}}/local.ini"}.
+{template, "rcouch.rel/1.1/overlay/etc/rcouch/vm.args", "rel/overlay/etc/{{appid}}/vm.args"}.
+{template, "rcouch.rel/1.1/overlay/etc/rc.d/rcouch", "rel/overlay/etc/rc.d/{{appid}}"}.
+{template, "rcouch.rel/1.1/overlay/etc/logrotate.d/rcouch", "rel/overlay/etc/logrotate.d/{{appid}}"}.
+{template, "rcouch.rel/1.1/overlay/etc/default/rcouch",  "rel/overlay/etc/default/{{appid}}"}.
+{template, "rcouch.rel/1.1/reltool.config", "rel/reltool.config"}.
+{template, "rcouch.rel/1.1/overlay/erts-vsn/bin/erl", "rel/overlay/erts-vsn/bin/erl"}.
 
 
