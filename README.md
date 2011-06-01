@@ -5,9 +5,15 @@ CouchDB releases or embed CouchDB applications based on the rebared
 version of Apache CouchDB provided by the [refuge
 project](http://refuge.io). 
 
-The version of CouchDB provided is based on couchdb trunk for now and
-can be used on Linux, FreeBSD 8.0x and sup, MacOSX 10.6/10.7 with Erlang
-R13B04/R14x. Tested on i386, amd64 and Arm platforms.
+The version of CouchDB provided can be based on:
+
+ - trunk (updated once a day)
+ - branch 1.1x (stable release)
+
+
+Platforms supported are Linux, FreeBSD 8.0x and sup, MacOSX 10.6/10.7
+with Erlang R13B04/R14x, Windows is coming. Tested on i386, amd64 and
+Arm platforms.
 
 ##Installation:
 
@@ -25,7 +31,7 @@ Drop these templates in ~/.rebar/templates.
 ##Create a custom CouchDB release
 
 To create a custom release of CouchDB with your own plugins, use the
-**rcouch** template:
+**rcouch** templatefor trunk or **rcouch11** for 1.1.x branch:
 
     $ mkdir myapp
     $ rebar create template=rcouch appid=myapp
@@ -48,7 +54,8 @@ rebar config and editing rel/reltool.config.
 ##Embed CouchDB in your application
 
 To start an Erlang OTP application that embed CouchDB, use the
-**rebar_embed** template:
+**rebar_embed** template for trunk or **rcouch11_embed** for 1.1.x
+branch:
 
     $ mkdir myapp
     $ rebar create template=rcouch_embed appid=myapp
